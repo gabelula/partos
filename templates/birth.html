@@ -1,0 +1,22 @@
+      {% include '_header.html' %}
+
+      <h1>{{ birth.title|capfirst }}</h1>
+
+      <p>{{ birth.content }}</p>
+
+      <p>
+      Año: {{ birth.year }}<br>
+      Nacido en {{ birth.place }}<br>
+      {{ birth.city }} / {{ birth.country }}
+      </p>
+
+      <i>{{ birth.name }}</i>
+
+      <footer>
+        <p>&copy; Derecho A Parir Donde Queramos 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

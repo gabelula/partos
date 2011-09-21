@@ -1,0 +1,16 @@
+      {% include '_header.html' %}
+
+      <form action="/tu_historia/" method="post">{% csrf_token %}        
+        {{ form.as_p }}
+        <input type="submit" value="Enviar" />
+      </form>
+      No publicaremos tu correo electronico.
+
+      <footer>
+        <p>&copy; Derecho A Parir Donde Queramos 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>

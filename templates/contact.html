@@ -1,0 +1,35 @@
+      {% include '_header.html' %}
+
+      <form action="/contacto/" method="post">{% csrf_token %}
+        {{ form.non_field_errors }}
+        <p>
+          {{ form.subject.errors }}
+          <label for="id_subject">Titulo del Correo:</label>
+          {{ form.subject }}
+        </p>
+        <p>
+          {{ form.message.errors }}
+          <label for="id_message">Mensaje:</label>
+          {{ form.message }}
+        </p>
+        <p>
+          {{ form.email.errors }}
+          <label for="id_email">Correo Electronico:</label>
+          {{ form.email }}
+        </p>
+        <p>
+          {{ form.captcha.errors }}
+          <label for="id_captcha">Qué letras ves?:</label>
+          {{ form.captcha }}
+        </p>
+        <p><input type="submit" value="Enviar" /></p>
+      </form>
+
+      <footer>
+        <p>&copy; Derecho A Parir Donde Queramos 2011</p>
+      </footer>
+
+    </div> <!-- /container -->
+
+  </body>
+</html>
