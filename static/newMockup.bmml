@@ -1,0 +1,105 @@
+<mockup version="1.0" skin="sketch" measuredW="1342" measuredH="760" mockupW="912" mockupH="731">
+  <controls>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::Canvas" x="430" y="29" w="912" h="731" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="-1"/>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Title" x="492" y="69" w="-1" h="-1" measuredW="799" measuredH="72" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>60</size>
+        <text>Historias%20De%20Parto%20En%20Uruguay</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Button" x="801" y="162" w="169" h="44" measuredW="126" measuredH="28" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Enviar%20una%20historia</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="__group__" x="507" y="252" w="232" h="367" measuredW="232" measuredH="367" zOrder="2" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="232" h="367" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="12"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="15" y="21" w="202" h="-1" measuredW="181" measuredH="27" zOrder="1" locked="false" isInGroup="12">
+          <controlProperties>
+            <text>Camilo%20en%20casa%2C%20hijo%20de%20Oxum</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Paragraph" x="15" y="65" w="184" h="154" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="12">
+          <controlProperties>
+            <text>El%2031%20de%20marzo%20a%20las%204%3A40%20pm%20nacio%20Camilo%20Durruti%20%5Baun%20sin%20apellido%5D%20en%20nuestra%20casa%20en%20Oakland%2C%20California.%20Hacia%20semanas%20que%20estabamos%20a%20las%20expectativas%2C%20yo%20caminando%20de%20aca%20para%20alla%20para%20agilitar%20el%20parto%2C%20tomando%20mucho%20liquido%2C%20no%20comiendo%20dulces.%20</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::List" x="15" y="250" w="202" h="91" measuredW="100" measuredH="126" zOrder="3" locked="false" isInGroup="12">
+          <controlProperties>
+            <borderStyle>square</borderStyle>
+            <text>Lugar%3A%20Casa%0AA%F1o%3A%202007%0ACiudad%3A%20Oakland%0APa%EDs%3A%20EEUU</text>
+            <value>0</value>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="15" y="219" w="-1" h="-1" measuredW="94" measuredH="21" zOrder="4" locked="false" isInGroup="12">
+          <controlProperties>
+            <text>Seguir%20leyendo.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="13" controlTypeID="__group__" x="770" y="252" w="232" h="292" measuredW="232" measuredH="292" zOrder="4" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="232" h="292" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="13"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="15" y="17" w="202" h="-1" measuredW="181" measuredH="27" zOrder="1" locked="false" isInGroup="13">
+          <controlProperties>
+            <text>Camilo%20en%20casa%2C%20hijo%20de%20Oxum</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Paragraph" x="15" y="52" w="184" h="123" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="13">
+          <controlProperties>
+            <text>El%2031%20de%20marzo%20a%20las%204%3A40%20pm%20nacio%20Camilo%20Durruti%20%5Baun%20sin%20apellido%5D%20en%20nuestra%20casa%20en%20Oakland%2C%20California.%20Hacia%20semanas%20que%20estabamos%20a%20las%20expectativas%2C%20yo%20caminando%20de%20aca%20para%20alla%20para%20agilitar%20el%20parto%2C%20tomando%20mucho%20liquido%2C%20no%20comiendo%20dulces.%20</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::List" x="15" y="199" w="202" h="72" measuredW="100" measuredH="126" zOrder="3" locked="false" isInGroup="13">
+          <controlProperties>
+            <borderStyle>square</borderStyle>
+            <text>Lugar%3A%20Casa%0AA%F1o%3A%202007%0ACiudad%3A%20Oakland%0APa%EDs%3A%20EEUU</text>
+            <value>0</value>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="15" y="174" w="-1" h="-1" measuredW="94" measuredH="21" zOrder="4" locked="false" isInGroup="13">
+          <controlProperties>
+            <text>Seguir%20leyendo.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="14" controlTypeID="__group__" x="1033" y="252" w="232" h="367" measuredW="232" measuredH="367" zOrder="5" locked="false" isInGroup="-1">
+      <groupChildrenDescriptors>
+        <control controlID="0" controlTypeID="com.balsamiq.mockups::Canvas" x="0" y="0" w="232" h="367" measuredW="100" measuredH="70" zOrder="0" locked="false" isInGroup="14"/>
+        <control controlID="1" controlTypeID="com.balsamiq.mockups::TextInput" x="15" y="21" w="202" h="-1" measuredW="181" measuredH="27" zOrder="1" locked="false" isInGroup="14">
+          <controlProperties>
+            <text>Camilo%20en%20casa%2C%20hijo%20de%20Oxum</text>
+          </controlProperties>
+        </control>
+        <control controlID="2" controlTypeID="com.balsamiq.mockups::Paragraph" x="15" y="65" w="184" h="154" measuredW="200" measuredH="140" zOrder="2" locked="false" isInGroup="14">
+          <controlProperties>
+            <text>El%2031%20de%20marzo%20a%20las%204%3A40%20pm%20nacio%20Camilo%20Durruti%20%5Baun%20sin%20apellido%5D%20en%20nuestra%20casa%20en%20Oakland%2C%20California.%20Hacia%20semanas%20que%20estabamos%20a%20las%20expectativas%2C%20yo%20caminando%20de%20aca%20para%20alla%20para%20agilitar%20el%20parto%2C%20tomando%20mucho%20liquido%2C%20no%20comiendo%20dulces.%20</text>
+          </controlProperties>
+        </control>
+        <control controlID="3" controlTypeID="com.balsamiq.mockups::List" x="15" y="250" w="202" h="91" measuredW="100" measuredH="126" zOrder="3" locked="false" isInGroup="14">
+          <controlProperties>
+            <borderStyle>square</borderStyle>
+            <text>Lugar%3A%20Casa%0AA%F1o%3A%202007%0ACiudad%3A%20Oakland%0APa%EDs%3A%20EEUU</text>
+            <value>0</value>
+            <verticalScrollbar>false</verticalScrollbar>
+          </controlProperties>
+        </control>
+        <control controlID="4" controlTypeID="com.balsamiq.mockups::Link" x="15" y="219" w="-1" h="-1" measuredW="94" measuredH="21" zOrder="4" locked="false" isInGroup="14">
+          <controlProperties>
+            <text>Seguir%20leyendo.</text>
+          </controlProperties>
+        </control>
+      </groupChildrenDescriptors>
+    </control>
+    <control controlID="15" controlTypeID="com.balsamiq.mockups::Button" x="825" y="29" w="-1" h="-1" measuredW="115" measuredH="28" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Sobre%20Nosotros</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
