@@ -1,7 +1,7 @@
 # Django settings for partouy project.
 
-DEBUG = True
-TEMPLATE_DEBUG = True
+DEBUG = False
+TEMPLATE_DEBUG = False
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
@@ -12,8 +12,8 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'data',                      # Or path to database file if using sqlite3.
+        'ENGINE': 'django.db.backends', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': '',                      # Or path to database file if using sqlite3.
         'USER': '',                      # Not used with sqlite3.
         'PASSWORD': '',                  # Not used with sqlite3.
         'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
@@ -130,9 +130,9 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'tastypie',
     'captcha',
     'partouy.births',
+    'tastypie',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -160,13 +160,3 @@ LOGGING = {
 
 SET_BROKEN_LINK_EMAIL = True
 EMAIL_SUBJECT_PREFIX = '[Django Partos] '
-
-FACEBOOK_APP_ID = ' 255078801200050'
-FACEBOOK_API_KEY = 'cdf07760e5af5de9de9e7e8d8e86a62f'
-
-FACEBOOK_PERMS = ['email']
-
-#FACEBOOK_DEBUG_TOKEN = ''
-#FACEBOOK_DEBUG_UID = ''
-#FACEBOOK_DEBUG_COOKIE = ''
-#FACEBOOK_DEBUG_SIGNEDREQ = ''

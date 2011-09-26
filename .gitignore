@@ -4,3 +4,4 @@ data
 *.png
 *.bmml
 imagenes/
+settings.py
