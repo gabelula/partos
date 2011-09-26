@@ -1,1 +1,6 @@
 *.pyc
+*.jpg
+data
+*.png
+*.bmml
+imagenes/
