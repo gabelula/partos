@@ -25,7 +25,6 @@ class Birth(models.Model):
 
     def save(self):
       self.summary = self.truncate(self.content)
-      #self.slug
       super(Birth, self).save()
 
     def truncate(value, limit=30):

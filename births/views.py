@@ -35,7 +35,7 @@ def contact(request):
             subject   = form.cleaned_data['subject']
             message   = form.cleaned_data['message']
             email     = form.cleaned_data['email']
-            recipients = ['gabelula@gmail.com']
+            recipients = ['contacto@partosencasa.org']
 
             send_mail(subject, message, email, recipients)
             return HttpResponseRedirect('/gracias/')
