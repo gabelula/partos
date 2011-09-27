@@ -9,7 +9,7 @@ from births.models import Birth
 
 class CaptchaContactForm(forms.Form):
     subject = forms.CharField()
-    message = forms.CharField(max_length=100)
+    message = forms.CharField(widget=forms.Textarea)
     email = forms.EmailField()
     captcha = CaptchaField()
 
