@@ -4,4 +4,3 @@ data
 *.bmml
 imagenes/
 settings.py
-static/
