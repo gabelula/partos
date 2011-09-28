@@ -24,33 +24,32 @@ class Birth(models.Model):
         return self.title
 
     def save(self):
-      self.summary = self.truncate(self.content)
-      #self.slug
-      super(Birth, self).save()
+        self.summary = self.truncate(self.content)
+        super(Birth, self).save()
 
-    def truncate(value, limit=30):
-      """
-      Truncates a string after a given number of chars keeping whole words.
-      """
-      try:
-        limit = int(limit)
-      # invalid literal for int()
-      except ValueError:
-        # Fail silently.
-        return value
+    def truncate(self, value, limit=30):
+        """
+        Truncates a string after a given number of chars keeping whole words.
+        """
+        try:
+          limit = int(limit)
+        # invalid literal for int()
+        except ValueError:
+          # Fail silently.
+          return value
     
-      # Make sure it's unicode
-      value = unicode(value)
+        # Make sure it's unicode
+        value = unicode(value)
     
-      # Return the string itself if length is smaller or equal to the limit
-      if len(value) <= limit:
-        return value
+        # Return the string itself if length is smaller or equal to the limit
+        if len(value) <= limit:
+          return value
     
-      # Cut the string
-      value = value[:limit]
+        # Cut the string
+        value = value[:limit]
     
-      # Break into words and remove the last
-      words = value.split(' ')[:-1]
+        # Break into words and remove the last
+        words = value.split(' ')[:-1]
     
-      # Join the words and return
-      return ' '.join(words) + '...'
+        # Join the words and return
+        return ' '.join(words) + '...'

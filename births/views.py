@@ -5,6 +5,7 @@ from django.http import HttpResponseRedirect
 from django import forms
 from django.core.context_processors import csrf
 from captcha.fields import CaptchaField
+from tinymce.widgets import TinyMCE
 from births.models import Birth
 
 class CaptchaContactForm(forms.Form):
@@ -15,12 +16,13 @@ class CaptchaContactForm(forms.Form):
 
 class CaptchaBirthForm(forms.ModelForm):
     captcha = CaptchaField()
+    content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows':30}))
     class Meta:
         model = Birth
         fields =('title','content','year','place','city','country','name','email')
 
 def home(request):
-    return render_to_response('index.html', {'birth_list': Birth.objects.all()}, context_instance=RequestContext(request))
+    return render_to_response('index.html', {'birth_list': Birth.objects.filter(active=True)}, context_instance=RequestContext(request))
 
 def about(request):
     return render_to_response('about.html', context_instance=RequestContext(request))
@@ -67,4 +69,5 @@ def post_birth(request):
 
 def get_birth(request, bslug):
     birth = Birth.objects.get(slug=bslug)
+
     return render_to_response('birth.html', {'birth': birth}, context_instance=RequestContext(request))

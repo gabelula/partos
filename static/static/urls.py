@@ -23,6 +23,8 @@ urlpatterns = patterns('',
     url(r'^tu_historia/', post_birth),
     # captcha for the forms
     url(r'^captcha/', include('captcha.urls')),
+    # tinymce editor
+    url(r'^tinymce/', include('tinymce.urls')),
 
     # api 
     (r'^api/',include(v1_api.urls)),

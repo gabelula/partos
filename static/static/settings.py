@@ -5,6 +5,7 @@ TEMPLATE_DEBUG = True
 
 ADMINS = (
     # ('Your Name', 'your_email@example.com'),
+    ('Nosotras', 'contacto@partosencasa.org'),
 )
 
 MANAGERS = ADMINS
@@ -129,9 +130,10 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
-    'captcha',
-    'partouy.births',
     'tastypie',
+    'captcha',
+    'tinymce',
+    'partouy.births',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -156,3 +158,19 @@ LOGGING = {
         },
     }
 }
+
+SET_BROKEN_LINK_EMAIL = True
+EMAIL_SUBJECT_PREFIX = '[Django Partos] '
+
+FACEBOOK_APP_ID = ' 255078801200050'
+FACEBOOK_API_KEY = 'cdf07760e5af5de9de9e7e8d8e86a62f'
+
+FACEBOOK_PERMS = ['email']
+
+#FACEBOOK_DEBUG_TOKEN = ''
+#FACEBOOK_DEBUG_UID = ''
+#FACEBOOK_DEBUG_COOKIE = ''
+#FACEBOOK_DEBUG_SIGNEDREQ = ''
+
+TINYMCE_JS_URL = 'http://localhost:8000/static/tiny_mce/tiny_mce.js'
+TINYMCE_JS_ROOT = 'static/tiny_mce'

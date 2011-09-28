@@ -2,12 +2,18 @@
 
 {% block title %}Historias de Partos en Casa en Uruguay{% endblock %}
 
+{% block form_media %} {{ form.media }} {% endblock %}
+
+
 {% block header %}Tú historia{% endblock %}
 
+
 {% block content %}
+
       <form action="/tu_historia/" method="post">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Enviar" />
+
       </form>
       No publicaremos tu correo electronico.
 
