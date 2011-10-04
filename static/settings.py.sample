@@ -130,8 +130,10 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     'django.contrib.admindocs',
     'captcha',
-    'partouy.births',
     'tastypie',
+    'grappelli',
+    'filebrowser',
+    'partouy.births',
 )
 
 # A sample logging configuration. The only tangible logging
@@ -157,5 +159,18 @@ LOGGING = {
     }
 }
 
+#EMAIL_HOST
+#EMAIL_PORT
+#EMAIL_HOST_USER
+#EMAIL_HOST_PASSWORD
+#EMAIL_USE_TLS
 SET_BROKEN_LINK_EMAIL = True
 EMAIL_SUBJECT_PREFIX = '[Django Partos] '
+
+#FACEBOOK_APP_ID
+#FACEBOOK_API_KEY
+#FACEBOOK_PERMS
+
+#TINYMCE_JS_URL
+#TINYMCE_JS_ROOT
+

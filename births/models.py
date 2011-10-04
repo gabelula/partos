@@ -9,6 +9,7 @@ class Birth(models.Model):
 
     title = models.CharField(max_length=30, verbose_name=u'título')
     content = models.TextField(verbose_name="historia")
+    image = models.ImageField(upload_to='photos/%Y/%m/%d')
     summary = models.TextField()
     slug  = AutoSlugField(max_length=20, unique=True, populate_from=('title',)) 
     year =  models.IntegerField(verbose_name=u'año del parto')

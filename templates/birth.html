@@ -4,7 +4,13 @@
 
 {% block header %}{{ birth.title|capfirst }}{% endblock %}
 
+{% load thumbnail %}
+
 {% block content %}
+
+      {% thumbnail birth.image "100x100" crop="center" as im %}
+        <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+      {% endthumbnail %}
 
       <p>{{ birth.content|safe }}</p>
 
@@ -12,7 +18,7 @@
 
       <p>
       Año: {{ birth.year }}<br>
-      Nacido en {{ birth.place }}<br>
+      Nacido en {{ place }}<br>
       Lugar: {{ birth.city }} / {{ birth.country }}
       </p>
 {% endblock %}

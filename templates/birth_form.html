@@ -10,7 +10,7 @@
 
 {% block content %}
 
-      <form action="/tu_historia/" method="post">{% csrf_token %}
+      <form enctype="multipart/form-data" action="/tu_historia/" method="post">{% csrf_token %}
         {{ form.as_p }}
         <input type="submit" value="Enviar" />
 

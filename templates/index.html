@@ -2,13 +2,18 @@
 
 {% block title %}Historias de Partos en Uruguay{% endblock %}
 
+{% load thumbnail %}
+
 {% block content %}
       <div class="row">
       {% for story in birth_list %}
         <div class="span5">
           <h2>{{ story.title }}</h2>
-          <p>{{ story.summary|safe }}</p>
-          <p><a href="/historia/{{ story.slug }}">Continuar leyendo&raquo;</a></p>
+          <a href="/historia/{{ story.slug }}">
+          {% thumbnail story.image "200x200" crop="center" as im %}
+            <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
+          {% endthumbnail %}
+          </a>
         </div>
       {% endfor %}
     </div>

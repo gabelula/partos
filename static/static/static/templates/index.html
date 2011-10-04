@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Historias de Partos en Uruguay{% endblock %}
+
+{% block content %}
+      <div class="row">
+      {% for story in birth_list %}
+        <div class="span5">
+          <h2>{{ story.title }}</h2>
+          <p>{{ story.summary }}</p>
+          <p><a class="btn" href="/historia/{{ story.slug }}">Continuar leyendo&raquo;</a></p>
+        </div>
+      {% endfor %}
+    </div>
+{% endblock %}

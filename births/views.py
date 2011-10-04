@@ -1,6 +1,6 @@
 from django.template import RequestContext
 from django.shortcuts import render_to_response
-from django.core.mail import send_mail
+from django.core.mail import EmailMessage, BadHeaderError
 from django.http import HttpResponseRedirect
 from django import forms
 from django.core.context_processors import csrf
@@ -16,10 +16,10 @@ class CaptchaContactForm(forms.Form):
 
 class CaptchaBirthForm(forms.ModelForm):
     captcha = CaptchaField()
-    content = forms.CharField(widget=TinyMCE(attrs={'cols': 80, 'rows':30}))
+    content = forms.CharField(widget=TinyMCE())
     class Meta:
         model = Birth
-        fields =('title','content','year','place','city','country','name','email')
+        fields =('title','image', 'content','year','place','city','country', 'name','email')
 
 def home(request):
     return render_to_response('index.html', {'birth_list': Birth.objects.filter(active=True)}, context_instance=RequestContext(request))
@@ -39,8 +39,15 @@ def contact(request):
             email     = form.cleaned_data['email']
             recipients = ['contacto@partosencasa.org']
 
-            send_mail(subject, message, email, recipients)
-            return HttpResponseRedirect('/gracias/')
+            if subject and message and email:
+                try:
+                    email = EmailMessage(subject, message, email, to=recipients, fail_silently=True)
+                    email.send()
+                except BadHeaderError:
+                    return HttpResponse('Invalid header found')
+                return HttpResponseRedirect('/gracias/')
+            else:
+               return HttpResponse('Make sure all fields are entered and valid.')
     else:
         form = CaptchaContactForm()
 
@@ -56,7 +63,7 @@ def post_birth(request):
     c = {}
     c.update(csrf(request))
     if request.method == 'POST':
-        form = CaptchaBirthForm(request.POST)
+        form = CaptchaBirthForm(request.POST, request.FILES)
         if form.is_valid():
             human = True
             # save the data
@@ -69,5 +76,10 @@ def post_birth(request):
 
 def get_birth(request, bslug):
     birth = Birth.objects.get(slug=bslug)
+    place = birth.get_place_display()
 
-    return render_to_response('birth.html', {'birth': birth}, context_instance=RequestContext(request))
+    return render_to_response('birth.html', {'birth': birth, 'place': place}, context_instance=RequestContext(request))
+
+def upload_field(request):
+    if request.method == 'POST':
+        form = UploadFileForm(request.POST, request.FILES)

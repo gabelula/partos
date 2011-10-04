@@ -1,7 +1,8 @@
 from django.conf.urls.defaults import patterns, include, url
-from partouy.births.views import home, about, contact, thanks, post_birth, thanks_birth, get_birth
-from births.api import BirthResource
 from tastypie.api import Api
+import filebrowser
+from births.api import BirthResource
+from partouy.births.views import home, about, contact, thanks, post_birth, thanks_birth, get_birth
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -29,9 +30,8 @@ urlpatterns = patterns('',
     # api 
     (r'^api/',include(v1_api.urls)),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-
-    # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/filebrowser/', include('filebrowser.urls')),
+    url(r'^grappelli/', include('grappelli.urls')),
 )

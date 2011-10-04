@@ -133,6 +133,8 @@ INSTALLED_APPS = (
     'tastypie',
     'captcha',
     'tinymce',
+    'grappelli',
+    'filebrowser',
     'partouy.births',
 )
 

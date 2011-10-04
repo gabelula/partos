@@ -7,8 +7,8 @@
       {% for story in birth_list %}
         <div class="span5">
           <h2>{{ story.title }}</h2>
-          <p>{{ story.summary }}</p>
-          <p><a class="btn" href="/historia/{{ story.slug }}">Continuar leyendo&raquo;</a></p>
+          <p>{{ story.summary|safe }}</p>
+          <p><a href="/historia/{{ story.slug }}">Continuar leyendo&raquo;</a></p>
         </div>
       {% endfor %}
     </div>

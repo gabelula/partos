@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}{{ birth.title }}{% endblock %}
+
+{% block header %}{{ birth.title|capfirst }}{% endblock %}
+
+{% block content %}
+
+      <p>{{ birth.content }}</p>
+
+      <i>{{ birth.name }}</i><br><br>
+
+      <p>
+      Año: {{ birth.year }}<br>
+      Nacido en {{ birth.place }}<br>
+      Lugar: {{ birth.city }} / {{ birth.country }}
+      </p>
+{% endblock %}
