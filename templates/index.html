@@ -8,7 +8,6 @@
       <div class="row">
       {% for story in birth_list %}
         <div class="span5">
-          <h2>{{ story.title }}</h2>
           <a href="/historia/{{ story.slug }}">
           {% thumbnail story.image "200x200" crop="center" as im %}
             <img src="{{ im.url }}" width="{{ im.width }}" height="{{ im.height }}">
