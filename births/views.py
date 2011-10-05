@@ -41,7 +41,7 @@ def contact(request):
 
             if subject and message and email:
                 try:
-                    email = EmailMessage(subject, message, email, to=recipients, fail_silently=True)
+                    email = EmailMessage(subject, message, email, to=recipients)
                     email.send()
                 except BadHeaderError:
                     return HttpResponse('Invalid header found')
